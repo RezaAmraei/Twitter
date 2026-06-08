@@ -11,3 +11,6 @@ jobs:
     steps:
       - name: Ping Website
         run: curl -L --fail --max-time 30 https://main.d3ieofe88k6zwp.amplifyapp.com/
+
+      - name: Ping Backend Users Endpoint
+        run: curl -L --fail --max-time 30 https://ql6u1sjxf2.execute-api.us-east-1.amazonaws.com/Prod/api/users
