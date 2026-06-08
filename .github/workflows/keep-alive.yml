@@ -2,7 +2,7 @@ name: Keep Site Alive
 
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -13,4 +13,4 @@ jobs:
         run: curl -L --fail --max-time 30 https://main.d3ieofe88k6zwp.amplifyapp.com/
 
       - name: Ping Backend Users Endpoint
-        run: curl -L --fail --max-time 30 https://ql6u1sjxf2.execute-api.us-east-1.amazonaws.com/Prod/api/users
+        run: curl -L --max-time 30 https://ql6u1sjxf2.execute-api.us-east-1.amazonaws.com/Prod/api/users || true
